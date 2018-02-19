@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SearchLocation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAz-Og-TEz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.094117647060000004" green="0.17254901959999999" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.094117647058823528" green="0.17254901960784313" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                    <color key="textColor" red="0.1764705882352941" green="0.70196078431372544" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Search on Google Places" id="ZSB-Sh-cVa">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="aod-Jz-QZ5">
+                                            <color key="tintColor" red="0.1764705882" green="0.70196078429999997" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="showSearchController:" destination="BYZ-38-t0r" id="u57-ph-fgo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXs-24-5Cz">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fAz-Og-TEz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1eU-xx-Rgo"/>
+                            <constraint firstItem="mXs-24-5Cz" firstAttribute="top" secondItem="fAz-Og-TEz" secondAttribute="bottom" id="5Pm-5m-Ing"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mXs-24-5Cz" secondAttribute="trailing" id="6zj-2R-tod"/>
+                            <constraint firstItem="mXs-24-5Cz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hrx-uH-dxT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mXs-24-5Cz" secondAttribute="bottom" id="T1I-6I-q7c"/>
+                            <constraint firstItem="fAz-Og-TEz" firstAttribute="leading" secondItem="mXs-24-5Cz" secondAttribute="leading" id="mZp-w3-v2S"/>
+                            <constraint firstItem="fAz-Og-TEz" firstAttribute="trailing" secondItem="mXs-24-5Cz" secondAttribute="trailing" id="nl3-U8-cCR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapViewContainer" destination="mXs-24-5Cz" id="VB8-xr-LzK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
